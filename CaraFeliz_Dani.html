@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Titan+One" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Ejercicio 9</title>
+    <script type="text/javascript">
+      function cambiar1(){
+        document.getElementById("feliz").src = "https://images.emojiterra.com/google/android-oreo/512px/2639.png";
+      }
+      function cambiar2(){
+        document.getElementById("feliz").src = "https://images.emojiterra.com/google/android-oreo/512px/1f92d.png";
+      }
+    </script>
+    <style>
+    body{
+      text-align: center;
+    }
+    h1, p{
+      font-family: Oswald;
+    }
+    button{
+      font-size: 20px;
+      border-radius: 5px;
+      border: none;
+      width: 15%;
+      height: 60px;
+      font-family: Titan One;
+    }
+    #hap{
+      background-color: #13f103;
+    }
+    #sad{
+       background-color: #e01c0b;
+    }
+    button:hover{
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>CAMBIAR TU ESTADO ANIMO CON DOS BOTONES!</h1>
+    <p>ACABA CON TU DEPRESIÓN!</p>
+    <div id="cara">
+      <button onclick="cambiar1()" id="sad">TRSITE</button>
+      <img src="https://png.icons8.com/metro/1600/question-mark.png" id="feliz" width="30%" height="30%">
+      <button onclick="cambiar2()" id="happy">FEILZ</button>
+    </div>
+  </body>
+</html>
