@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+		function alquiler_coche(precio){
+			var valorDevuelto = precio * 40;
+			if(precio >= 7){
+				valorDevuelto -= 50;
+			}else if(precio >= 3){
+				valorDevuelto -= 20
+			}
+			return valorDevuelto;
+		}
+
+
+function calcular_coste(){
+	var alquiler = document.getElementById("alquiler").value;
+	var resultado = alquiler_coche(alquiler)
+	document.getElementById("alquiler_de_coche").value = resultado;
+}
+	</script>
+
+
+</head>
+<body>
+	<label>Días de alquiler del coche:</label>
+	<input id="alquiler" type="text">
+	<input onclick="calcular_coste()" value="calcular coste" type="button">
+	<br><br>
+	<label>Coste alquiler coche: </label><input id="alquiler_de_coche" type="text"><br>
+
+</body>
+</html>

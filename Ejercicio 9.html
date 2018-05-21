@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+  function convertir(){
+  var noches = document.getElementById("noches").value;
+  noches = noches*140;
+  document.getElementById("noches_hotel").value = noches;
+ }
+</script>
+  </head>
+  <body>
+	 <form>
+ Introduzca el numero de noches: <input id="noches" type="text">
+  <input value="Calcular coste" onclick="convertir()" type="button"><br>
+ Precio hotel: <input id="noches_hotel" type="text"><br>
+
+
+  </body>
+    </html>

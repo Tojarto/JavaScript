@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+		function coste_hotel(precio){
+			var resultado = 140 * precio;
+			return resultado;
+		}
+
+
+		function coste_avion(destino, noches){
+			var coste = 0;
+			if(destino=="Oviedo"){
+				coste = 325;
+			}else if(destino=="Tokyo"){
+				coste = 1200;
+			}else if(destino=="Madrid"){
+				coste = 200;
+			}else if(destino=="Barcelona"){
+				coste = 150;
+			}
+			if(noches > 3){
+				coste = coste * 0.9;
+			}
+			return coste;
+		}
+
+
+function calcular_coste(){
+	var numero_noches = document.getElementById("numero_noches").value;
+	var destino = document.getElementById("Ciudad").value;
+	var resultado1 = coste_hotel(numero_noches);
+	var resultado2 = coste_avion(destino, numero_noches);
+	var resultado3 = coste_alquiler_coche(numero_noches)
+	document.getElementById("Hotel").value = resultado1;
+	document.getElementById("Viaje").value = resultado2;
+	document.getElementById("Coche").value = resultado3;
+	document.getElementById("resultado").value = resultado1+resultado2+resultado3;
+}
+		function coste_alquiler_coche(precio){
+			var valorDevuelto = precio * 40;
+			if(precio >= 7){
+				valorDevuelto -= 50;
+			}else if(precio >= 3){
+				valorDevuelto -= 20
+			}
+			return valorDevuelto;
+		}
+
+
+	</script>
+
+
+</head>
+<body>
+	<label>Elija el número de noches que desea alojarse en nuestro hotel:</label>
+	<input id="numero_noches" type="text">
+	<select id="Ciudad">
+		<option selected="selected" value="Oviedo">Oviedo</option>
+		<option value="Tokyo">Tokyo</option>
+		<option value="Madrid">Madrid</option>
+		<option value="Barcelona">Barcelona</option>
+	</select>
+	<input onclick="calcular_coste()" value="calcular coste" type="button">
+	<br><br>
+	<label>Precio del hotel: </label><input id="Hotel" type="text"> <br>
+	<label>Precio del viaje: </label><input id="Viaje" type="text"> <br>
+	<label>Precio del alquiler del coche: </label><input id="Coche" type="text"><br>
+	<label>Precio total:</label><input id="resultado" type="text"><br>
+
+</body>
+</html>

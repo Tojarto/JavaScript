@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+
+
+function operacion(op) {
+    var ope;
+    if (op == "n1") {
+        ope = document.getElementById("n1").value;
+    } else {
+        ope = (document.getElementById("n2").value;
+      }
+
+
+</script>
+  </head>
+  <body>
+
+  	 <p>Introduce numeros para realizar una operación:</p>
+
+	<input id="n1" onkeyup="numero1('n1')">
+  <select name="operador">
+       <option value="suma">+</option>
+       <option value="resta">-</option>
+       <option value="multiplicacion">*</option>
+       <option value="division">/</option>
+   </select>
+	<input id="n2" onkeyup="numero2('n2')">
+
+  <p><input id="resultado" onkeyup="resultado('r')"> Resultado</p>
+
+  </body>
+    </html>

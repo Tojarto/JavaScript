@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+var num = Math.round(Math.random()*5);
+        // * var num = 3;
+        var jugar = true;
+        while(jugar==true){
+            for(var i = 0; i < = 2; i++){
+                var numteclado = prompt("Introduzca un número del 1 al 5.");
+                if(numteclado == num){
+                    alert("Ha acertado el número secreto, enhorabuena");
+                    break;
+                }else{
+                    alert("Has fallado");
+                }
+            }
+            quieroJugar = confirm("¿Quieres volver a intentarlo?");
+        }
+        alert("El juego ha acabado");
+</script>
+  </head>
+  <body>
+  </body>
+    </html>

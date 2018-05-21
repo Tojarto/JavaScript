@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+function enviarFormulario() {
+ var nombre = document.getElementById('nombre');
+ var tipocaja = document.getElementById('tipocaja');
+ var dimension = document.formulario.radioButtonName('dimension');
+ alert(nombre + "ha selecionado una caja de " + tipocaja, "con unas dimensiones " + dimension);
+}
+
+</script>
+<body>
+<form method="GET">
+Nombre: <input type="text" class="form" name="nombre" placeholder="Escribe tu nombre" id="nombre"><br>
+
+Tipo del paquete:
+<select name="tipocaja" id="tipocaja">
+  <option value="Carton">Carton</option>
+  <option value="Madera">Madera</option>
+  <option value="Hierro">Hierro</option>
+  <option value="Aluminio">Aluminio</option>
+</select><br>
+
+Tamaño del paquete:<br>
+  <input type="radio" name="dimension" id="dimension1" value="Pequeña" checked> Pequeña<br>
+  <input type="radio" name="dimension" id="dimension2" value="Mediana" > Mediana<br>
+  <input type="radio" name="dimension" id="dimension3" value="Grande" > Grande<br>
+  <input type="submit" onclick="return enviarFormulario();" value="Enviar formulario">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+
+
+function convertir(grados) {
+    var conversion;
+    if (grados == "C") {
+        conversion = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = Math.round(conversion);
+    } else {
+        conversion = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = Math.round(conversion);
+    }
+}
+
+
+</script>
+  </head>
+  <body>
+
+  	 <p>Introduce los grados:</p>
+
+	<p><input id="c" onkeyup="convertir('C')"> Grados Centigrados</p>
+
+	<p><input id="f" onkeyup="convertir('F')"> Grados Fahrenheit</p>
+
+  </body>
+    </html>

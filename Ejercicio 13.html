@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang=en dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+function enviarFormulario() {
+ var nombre = document.getElementById('nombre').value;
+ return confirm('Tu nombre es: '+nombre);
+}
+
+</script>
+<body>
+<form method="GET">
+Escribe tu nombre,por favor: <input type="text" class="form" name="nombre" placeholder="Escribe tu nombre" id="nombre">
+<input type="submit" onclick="return enviarFormulario();" value="Enviar formulario">
+</form>
+</form>
+</body>
+</html>
