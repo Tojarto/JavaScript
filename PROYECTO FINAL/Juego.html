@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Juego</title>
+
+  <style>
+
+
+  #myCanvas{
+		background-image: url("espacio.jpg");
+
+	}
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /*Lugar donde se pide que pulse el boton de empezar juego*/
+    #primeraPantalla {
+      width: 100%;
+      height: 100%;
+      background-color: #D926E7;
+      text-align: center;
+      /*Sirve para cambiar de pagina (si no se amontonaba la info)*/
+      overflow: hidden;
+    }
+
+    /*Lugar donde se pide que introduzca nombre y empiece partida*/
+    #segundaPantalla {
+      width: 100%;
+      height: 100%;
+      background-color: #D926E7;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /*Aviso de que ha ganado la partida*/
+    #victoria{
+      width: 100%;
+      height: 0%;
+      background-color: pink;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    /*Titulo de la primera pantalla*/
+    #bienvenida {
+      color: black;
+      font-size: 50px;
+      padding-top: 10%;
+    }
+
+    /*Titulo de la segunda pantalla*/
+    #introducirNombre {
+      color: black;
+      font-size: 50px;
+      padding-top: 5%;
+    }
+
+    /*Botones de comenzar la partida*/
+    .boton {
+      width: 180px;
+      height: 80px;
+      border: none;
+      font-size: 20px;
+      margin-top: 10%;
+    }
+
+    /*boton que da comienzo a la partida*/
+    #Jugar {
+      width: 180px;
+      height: 80px;
+      border: none;
+      font-size: 20px;
+      margin-top: 10%;
+    }
+
+    /*Lugar donde se pide el nombre de usuario*/
+    #player {
+      width: 200px;
+      height: 40px;
+      background-color: white;
+      color: black;
+      font-size: 15px;
+      margin-top: 5%;
+    }
+
+    /*Pantalla donde se juega*/
+    #pantallaJuego {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #D926E7;
+    }
+
+    /*Apartado donde se recoge la puntuacion, el nombre del jugador, las vidas*/
+    .marcador {
+      width: 25%;
+      height: 20%;
+      text-align: center;
+      float: left;
+    }
+
+    /*Lugar donde se indica la puntuacion*/
+    .UserScoreLives {
+      font-size: 20px;
+    }
+
+    /*lugar donde se indica el numeero de vidas restantes*/
+    .CurrentUserScoreLives {
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!--Aqui introduzco el audio del juego-->
+  <audio id="musica">
+    <source src="musica/mariokart.mp3" type="audio/mp3">
+  </audio>
+
+  <!--Aviso de que se ha ganado la partida-->
+  <div id="Has ganado!!!">
+    <h1 id="Ganador"></h1>
+  </div>
+  <!--Pantalla de bienvenida al juego -->
+  <div id="primeraPantalla">
+    <h1 id="bienvenida">Bienvenido al juego!!!</h1>
+    <button id="btnIntro" class="boton" onclick="pagina1()">Comenzar</button>
+  </div>
+  <!--pantalla de introducir datos-->
+  <div id="segundaPantalla">
+    <h1 id="introducirNombre">¿Cómo te llamas?</h1>
+    <input type="text" id="player">
+    <br>
+    <!--boton que da comienzo al juego-->
+    <button id="Jugar" class="boton" onclick="pagina2()">A jugar!!</button>
+    <br>
+  </div>
+
+  <!--pantalla donde se juega-->
+  <div id="pantallaJuego">
+    <!--lugar donde se indica el nombre del jugador, la puntuacion, las vidas-->
+    <div class="marcador">
+      <h2 class="UserScoreLives">JUGADOR</h2>
+      <h3 class="CurrentUserScoreLives" id="jugador"></h2>
+    </div>
+
+    <div class="marcador">
+      <h3 class="UserScoreLives">VIDAS</h2>
+      <h2 class="CurrentUserScoreLives" id="vidas">3</h2>
+    </div>
+
+    <div class="marcador">
+      <h3 class="UserScoreLives">PUNTUACIÓN</h2>
+      <h2 class="CurrentUserScoreLives" id="puntuacion">50</h2>
+    </div>
+
+    <canvas id="myCanvas" width="" height=""></canvas>
+
+  </div>
+
+  <!--Lugar donde se encuentra el codigo de js-->
+  <script type="text/javascript" src="js/Javascript2.js"></script>
+</body>
+</html>
